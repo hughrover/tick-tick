@@ -1,0 +1,24 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+
+# Eclipse project files
+.settings
+.project
+.target
+.classpath
+
+*.class
+
+# Package Files
+*.jar
+*.war
+*.ear
+**/target/
+target/
+bin/
+
+# virtual machine crash logs
+hs_err_pid*
