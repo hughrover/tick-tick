@@ -5,16 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * User: chengcheng.liu
- * Date: 16/11/8
+ * Date: 16/11/22
  */
-@Controller
-@RequestMapping({"/", "/hello"})
-public class HelloController {
-    @RequestMapping("/name")
-    public String hello(){
-        return "hello";
-    }
 
+@Controller
+@RequestMapping("/index.html")
+public class HomeController {
     @RequestMapping
     public String home() {
         return "hello";
