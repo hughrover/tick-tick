@@ -11,5 +11,11 @@
 
     <artifactId>tick-tick-service</artifactId>
 
-
+    <dependencies>
+        <!--spring framework start -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
 </project>
