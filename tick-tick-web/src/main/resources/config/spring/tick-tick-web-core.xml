@@ -10,10 +10,13 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="mine.ticks.web.controller" />
-    <context:annotation-config />
-    <mvc:annotation-driven />
-    <mvc:resources mapping="/static" location="static" />
+    <context:component-scan base-package="mine.ticks.web.controller"/>
+    <context:annotation-config/>
+    <mvc:annotation-driven/>
+
+    <mvc:resources mapping="/static" location="static"/>
+    <!--handle the <welcome-file-list> in web.xml-->
+    <mvc:default-servlet-handler/>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           id="internalResourceViewResolver">
