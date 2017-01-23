@@ -17,12 +17,13 @@
         <spring.version>4.1.3.RELEASE</spring.version>
         <jackson.version>2.3.0</jackson.version>
         <javax.servlet-api-version>3.1.0</javax.servlet-api-version>
+        <quartz.version>2.1.1</quartz.version>
         <env>dev</env>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!--spring framework start -->
+            <!--spring framework start-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
@@ -59,8 +60,9 @@
                 <version>${spring.version}</version>
                 <scope>test</scope>
             </dependency>
+            <!--spring framework end-->
 
-            <!-- Test -->
+            <!--test start-->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -72,8 +74,9 @@
                 <version>${javax.servlet-api-version}</version>
                 <scope>provided</scope>
             </dependency>
+            <!--test end-->
 
-            <!-- JSON BEGIN -->
+            <!--jackson begin-->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
@@ -89,6 +92,15 @@
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+            <!--jackson end-->
+
+            <!--quartz begin-->
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${quartz.version}</version>
+            </dependency>
+            <!--quartz end-->
         </dependencies>
     </dependencyManagement>
 

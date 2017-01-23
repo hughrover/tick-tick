@@ -1,4 +1,4 @@
-package mine.ticks.service.executor.task;
+package mine.ticks.service.executor;
 
 import java.util.concurrent.Callable;
 
