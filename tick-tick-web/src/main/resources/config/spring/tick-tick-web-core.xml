@@ -2,17 +2,19 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:fileOp="http://www.mine.org/schema/fileAccessor"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/mvc
-       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.mine.org/schema/fileAccessor http://www.mine.org/schema/fileAccessor.xsd">
 
-    <context:component-scan base-package="mine.ticks.web.controller"/>
+    <context:component-scan base-package="mine.ticks"/>
     <context:annotation-config/>
     <mvc:annotation-driven/>
+
+    <fileOp:fileAccessor id="fileAccessor" name="testFileAccessor"/>
 
     <mvc:resources mapping="/static" location="static"/>
     <!--handle the <welcome-file-list> in web.xml-->

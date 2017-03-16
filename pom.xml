@@ -11,6 +11,7 @@
     <modules>
         <module>tick-tick-web</module>
         <module>tick-tick-service</module>
+        <module>tick-tick-common</module>
     </modules>
 
     <properties>
@@ -18,11 +19,18 @@
         <jackson.version>2.3.0</jackson.version>
         <javax.servlet-api-version>3.1.0</javax.servlet-api-version>
         <quartz.version>2.1.1</quartz.version>
+        <junit.version>4.11</junit.version>
         <env>dev</env>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>mine</groupId>
+                <artifactId>tick-tick-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
             <!--spring framework start-->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -56,6 +64,11 @@
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <version>${spring.version}</version>
                 <scope>test</scope>
@@ -66,7 +79,7 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.11</version>
+                <version>${junit.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -115,11 +128,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.6.1</version>
                 <configuration>
-                    <compilerVersion>1.6</compilerVersion>
-                    <source>1.6</source>
-                    <target>1.6</target>
+                    <compilerVersion>1.7</compilerVersion>
+                    <source>1.7</source>
+                    <target>1.7</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
